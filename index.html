@@ -4,39 +4,45 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jeannie She Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/70cb2069b5.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="left">
-                    <a href="#about-section">Jeannie She</a> <!--an anchor link-->
+        <main>
+            <header>
+                <nav class="navbar">
+                    <div class="navbar-left">
+                        <a href="index.html">Jeannie She</a> <!--an anchor link-->
+                    </div>
+                    <div class="navbar-right">
+                        <a href="about.html">About</a> <!--a link to another page-->
+                        <a href="projects.html">Projects</a>
+                        <a href="bitsnbobs.html">Bits 'n Bobs</a>
+                    </div>
+                </nav>
+            </header>
+            <section id="about-section">
+                
+                <div class="headshot-container">
+                    <img src="images/headshot.jpg" alt="headshot" class="headshot"> <!--crop in css-->
                 </div>
-                <div class="right">
-                    <a href="about.html">About</a> <!--a link to another page-->
-                    <a href="projects.html">Projects</a>
-                    <a href="bitsnbobs.html">Bits 'n Bobs</a>
+                <h2>Hi! I'm Jeannie.</h2>
+                
+                <div class="bio">
+                    <h3>
+                        I'm passionate about engineering solutions to biological problems using artificial intelligence.
+                    </h3>
                 </div>
-            </nav>
-        </header>
-        <section id="about-section">
-            <div class="headshot">
-                <img src="images/headshot.jpg" alt="headshot"> <!--crop in css-->
-            </div>
-            <h2>Hi! I'm Jeannie. It's nice to meet you!</h2>
-            <div class="bio">
-                <p>
-                    I'm passionate about engineering solutions to biological problems using artificial intelligence. Currently in undergrad at MIT!
-                </p>
-            </div>
-            
-        </section>
+                <div class="social-links">
+                    <a href="mailto:jeanshe@mit.edu"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+                    <a href="https://www.github.com/jeannieshe"><i class="fab fa-github fa-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/jeannieshe/"><i class="fab fa-linkedin fa-2xl"></i></a>
+                    <a href="https://www.goodreads.com/user/show/45358436-jeannie"><i class="fab fa-goodreads fa-2xl"></i></a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Jeannie She. All Rights Reserved.</p>
+        </footer>
     </body>
-    <footer>
-        <div class="social-links">
-            <p>github</p>
-            <!-- add github, linkedin, goodreads, instagram -->
-            <a href=""></a>
-        </div>
-        <p>&copy; 2024 Jeannie She. All Rights Reserved.</p>
-    </footer>
 </html>
