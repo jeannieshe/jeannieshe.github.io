@@ -35,9 +35,13 @@ html, body {
     padding: 0;
 }
 
+header { 
+    margin-bottom: 5rem;
+}
+
 main {
     flex-grow: 1;
-    padding-top: 15rem;
+    /* padding-top: 5rem; */
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -65,14 +69,15 @@ h3{
 
 /* gallery container */
 #gallery{
-    height: 50vh;
-    width: 100%;
+    width: 30%;
     max-width: 800px;
     overflow: hidden;
     position: relative;
     background: #000;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    height: auto;
 }
 
 /* images container */
@@ -85,10 +90,27 @@ h3{
 .images img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transition: opacity 0.5s ease;
 }
 
+.gallery-intro .a {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'Figtree', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.gallery-intro .b {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'Figtree', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+}
 /* headshot container and image */
 .headshot-container {
     width: 400px; /* Set the desired width */
@@ -99,8 +121,9 @@ h3{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     margin: auto;
-    margin-top: -7rem;
+    /* margin-top: 5rem; */
     margin-bottom: 4rem;
+    /* padding-top: 1rem; */
 }
 
 .headshot {
@@ -120,18 +143,7 @@ h3{
     text-decoration: none;
     margin: 0 1rem;
 }
-/* bio */
-/* .bio { */
-    /* width: 400px; /* Set the desired width */
-    /* height: 400px; /* Set the desired height */
-    /* overflow: hidden;
-    background: #000;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
-    /* position: relative; */
-    /* margin: auto; */
-    /* margin-top: 15rem; */
-/* } */
+
 
 /* navigation bar */
 .navbar {
@@ -141,9 +153,10 @@ h3{
     padding: 1rem 2rem;
     background-color: #9ac1f5;
     position: fixed;
-    top: 0;
+    /* top: 0; */
     width: 100%;
     z-index: 1000;
+    /* margin-bottom: 0; */
 }
 
 .navbar a {
