@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jeannie She Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jeannie She</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/70cb2069b5.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <main>
-            <header>
-                <nav class="navbar">
-                    <div class="navbar-left">
-                        <a href="index.html">Jeannie She</a>
-                    </div>
-                    <div class="navbar-right">
-                        <a href="about.html">About</a>
-                        <a href="projects.html">Projects</a>
-                        <a href="bitsnbobs.html">Bits 'n Bobs</a>
-                    </div>
-                </nav>
-            </header>
-            <section id="about-section">
-                <div class="headshot-container">
-                    <img src="images/headshot.jpg" alt="headshot" class="headshot"> <!--crop in css-->
+        <header>
+            <h1>Header Logo</h1>
+            <nav>
+                <ul>
+                    <li><a>header link one</a></li>
+                    <li><a>header link two</a></li>
+                    <li><a>header link three</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="first">
+            <div class="container">
+                <h1>This website is awesome</h1>
+                <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
+                <button>Sign up</button>
+            </div>
+            <div class="image">
+                <img src="https://picsum.photos/200/300" alt="Random Image">
+                <!-- <img src="https://picsum.photos/200/300" alt="Random Image"> -->
+            </div>
+        </div>
+        <div class="second">
+            <h2>Some random information.</h2>
+            <div class="container">
+                <item>
+                    <img src="https://picsum.photos/200/300" alt="Random Image">
+                    <p>this is some subtext under an illustration or image</p>
+                </item>
+                <item>
+                    <img src="https://picsum.photos/200/300" alt="Random Image">
+                    <p>this is some subtext under an illustration or image</p>
+                </item>
+                <item>
+                    <img src="https://picsum.photos/200/300" alt="Random Image">
+                    <p>this is some subtext under an illustration or image</p>
+                </item>
+                <item>
+                    <img src="https://picsum.photos/200/300" alt="Random Image">
+                    <p>this is some subtext under an illustration or image</p>
+                </item>
+            </div>
+        </div>
+        <div class="third">
+            <p class="quote">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</p>
+            <p class="author">-Thor, God of Thunder</p>
+        </div>
+        <div class="fourth">
+            <div class="container">
+                <div class="nested-container">
+                    <p class="action">Call to action! It's time!</p>
+                    <p>Sign up for our product by clicking that button right over there!</p>
                 </div>
-                <h2>Hi! I'm Jeannie.</h2>
-                
-                <div class="bio">
-                    <h3>
-                        I'm passionate about engineering solutions to biological problems using artificial intelligence.
-                    </h3>
-                </div>
-                <div class="social-links">
-                    <a href="mailto:jeanshe@mit.edu"><i class="fa-solid fa-envelope fa-2xl"></i></a>
-                    <a href="https://www.github.com/jeannieshe"><i class="fab fa-github fa-2xl"></i></a>
-                    <a href="https://www.linkedin.com/in/jeannieshe/"><i class="fab fa-linkedin fa-2xl"></i></a>
-                    <a href="https://www.goodreads.com/user/show/45358436-jeannie"><i class="fab fa-goodreads fa-2xl"></i></a>
-                </div>
-            </section>
-        </main>
+                <button class="bottom">Sign up</button>
+            </div>
+        </div>
         <footer>
-            <p>&copy; 2024 Jeannie She. All Rights Reserved.</p>
+            <p>
+                Copyright The Odin Project 2021
+            </p>
         </footer>
     </body>
 </html>
