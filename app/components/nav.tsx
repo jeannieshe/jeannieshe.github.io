@@ -13,6 +13,9 @@ const navItems = {
   '/coursework': {
     name: 'teaching + coursework',
   },
+  // '/resume': {
+  //   name: 'resume',
+  // },
 }
 
 export function Navbar() {

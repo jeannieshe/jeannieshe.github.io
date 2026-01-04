@@ -10,7 +10,7 @@ interface Link {
 interface CardProps {
   title: string;
   subtitle?: string;
-  description: ReactNode;
+  description?: ReactNode;
   keywords?: string[];
   tech?: string[];
   links?: Link[];
@@ -36,7 +36,9 @@ export default function Card({
         <div className={images && images.length > 0 ? "md:w-[60%]" : "w-full"}>
           <h2 className="font-bold text-lg mb-2">{title}</h2>
           {subtitle && <p className="italic mb-3 text-neutral-300">{subtitle}</p>}
-          <div className="text-neutral-100">{description}</div>
+          {description && (
+            <div className="text-neutral-100">{description}</div>
+          )}
           {links && links.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
               {links.map((link, index) => (
