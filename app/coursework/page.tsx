@@ -1,5 +1,4 @@
 import Card from "app/components/card"
-import ImageSlider from "app/components/imageslider"
 
 export const metadata = {
   title: 'coursework',
