@@ -1,27 +1,49 @@
 import Link from 'next/link'
 import Card from './components/card'
+import Image from 'next/image'
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-4xl font-semibold tracking-tighter">
-        hi there! i'm jeannie.
-      </h1>
-      <p className="mb-8">
-        {`I'm an undergraduate student at MIT studying AI and bioengineering. I conduct research on, build,
-        and engineer highly ethical, explainable AI to remove human-made bottlenecks.
-        I'm crafting my life to contribute meaningful impact towards causes I care deeply about.
-        `}
-        </p>
-        <p className="mb-8">
-        {`I believe time is our most valuable asset. I enjoy reading, weightlifting, playing 
-        Bananagrams, admiring sunsets, 
-        exploring new cities, hiking, taking risks on my peers (see: pioneering the MIT Biotech Group's Consulting Initiative), 
-        and anything where I get to cherish and share joy with people I adore.`}
-        </p>
-        <p className="mb-8">
-        {`On an average day, you're more likely than not to find me with my beloved Kindle and journal, listening to Men I Trust :)`}
-        </p>
+          <h1 className="mb-8 text-4xl font-semibold tracking-tighter">
+            hi there! i'm jeannie.
+          </h1>
+      <div className="flex flex-row mb-10">
+        <div className="md:w-[70%]">
+          <p className="mb-8">
+            {`I'm an undergraduate student at MIT studying AI and bioengineering. I conduct research on, build,
+            and engineer highly ethical, explainable AI to remove human-made bottlenecks.
+            I'm crafting my life to contribute meaningful impact towards causes I care deeply about.
+            `}
+            </p>
+            <p className="mb-8">
+            {`I believe time is our most valuable asset. I enjoy reading, weightlifting, playing 
+            Bananagrams, admiring sunsets, 
+            exploring new cities, hiking, taking risks on my peers (see: pioneering the MIT Biotech Group's Consulting Initiative), 
+            and anything where I get to cherish and share joy with people I adore.`}
+            </p>
+            <p className="mb-8">
+            {`On an average day, you're more likely than not to find me with my beloved Kindle and journal, listening to Men I Trust :)`}
+            </p>
+            <p className="mb-8">
+            My email is <Link className="underline decoration-[#B33E6D] ml-0.5" href="mailto:jeanshe@mit.edu">jeanshe at mit dot edu</Link>. Feel free to reach out!
+            </p>
+
+
+
+        </div>
+          <div className="md:w-[30%] flex justify-center items-start">
+            <Image 
+              className="rounded-full object-cover w-full aspect-square" 
+              src="/images/happy on killian.jpg" 
+              alt="A headshot of Jeannie She" 
+              width="500" 
+              height="500"
+              style={{ objectPosition: "40% center" }}
+            />
+          </div>
+
+      </div>
 
       <h2 className="mb-5 text-3xl font-semibold tracking-tighter">
           what i'm up to this month
