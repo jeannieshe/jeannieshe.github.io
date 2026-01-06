@@ -37,7 +37,7 @@ export default function Page() {
           <div className="md:w-[30%] flex justify-center items-start">
             <Image 
               className="rounded-full object-cover w-full aspect-square" 
-              src="/images/happy on killian.jpg" 
+              src="/images/happy-on-killian.jpg" 
               alt="A headshot of Jeannie She" 
               width="500" 
               height="500"
