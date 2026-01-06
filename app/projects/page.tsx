@@ -2,6 +2,8 @@ import Card from "app/components/card"
 import ImageSlider from "app/components/imageslider"
 import Link from "next/link"
 
+export const runtime = "edge";
+
 export const metadata = {
   title: 'projects',
   description: 'Select list of projects.',

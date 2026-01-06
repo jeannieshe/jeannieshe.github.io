@@ -1,5 +1,7 @@
 import Card from "app/components/card"
 
+export const runtime = "edge";
+
 export const metadata = {
   title: 'coursework',
   description: 'Select list of MIT coursework.',

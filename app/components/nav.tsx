@@ -7,15 +7,9 @@ const navItems = {
   '/projects': {
     name: 'projects',
   },
-  // '/blog': {
-  //   name: 'blog',
-  // },
   '/coursework': {
     name: 'teaching + coursework',
   },
-  // '/resume': {
-  //   name: 'resume',
-  // },
 }
 
 export function Navbar() {

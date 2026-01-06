@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Card from './components/card'
 import Image from 'next/image'
 
+export const runtime = "edge";
+
 export default function Page() {
   return (
     <section>
@@ -18,7 +20,7 @@ export default function Page() {
             </p>
             <p className="mb-8">
             {`I believe time is our most valuable asset. I enjoy reading, weightlifting, playing 
-            Bananagrams, admiring sunsets, 
+            Bananagrams, playing tennis, running 5Ks, admiring sunsets, 
             exploring new cities, hiking, taking risks on my peers (see: pioneering the MIT Biotech Group's Consulting Initiative), 
             and anything where I get to cherish and share joy with people I adore.`}
             </p>
