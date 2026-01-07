@@ -1,28 +1,79 @@
-import Card from "app/components/card"
-import ImageSlider from "app/components/imageslider"
-import Link from "next/link"
+"use client";
 
-export const runtime = "edge";
-
-export const metadata = {
-  title: 'projects',
-  description: 'Select list of projects.',
-}
+import { useState } from "react";
+import { motion } from "framer-motion";
+import TimelineView from "app/components/TimelineView";
+import MapView from "app/components/MapView";
+import { projectsData, generateEdges } from "./projectsData";
+import { Map, List } from "lucide-react";
 
 export default function Projects() {
+  const [viewMode, setViewMode] = useState<"timeline" | "map">("timeline");
+  const edges = generateEdges(projectsData);
+
   return (
     <section>
-      <h1 className="mb-8 text-4xl font-semibold tracking-tighter">
-        projects
-      </h1>
+      <div className="flex items-center justify-between mb-8">
+        <h1 className="text-4xl font-semibold tracking-tighter">
+          projects
+        </h1>
 
-      <p className="mb-4">
+        {/* View Toggle Button */}
+        <div className="flex items-center gap-2 bg-gray-800/50 rounded-lg p-1 border border-gray-700">
+          <button
+            onClick={() => setViewMode("timeline")}
+            className={`flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ${
+              viewMode === "timeline"
+                ? "bg-purple-600 text-white shadow-lg"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            <List size={18} />
+            <span className="text-sm font-medium">Timeline</span>
+          </button>
+          <button
+            onClick={() => setViewMode("map")}
+            className={`flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ${
+              viewMode === "map"
+                ? "bg-purple-600 text-white shadow-lg"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            <Map size={18} />
+            <span className="text-sm font-medium">Map</span>
+          </button>
+        </div>
+      </div>
+
+      <p className="mb-6">
         {`My project work ranges the full gamut from machine learning and artificial intelligence to healthcare and biology to biological engineering.
         I am eternally grateful for all of my mentors and collaborators who have helped me grow and strengthen my research muscle.`}
       </p>
 
-      <div className="flex flex-col gap-y-4">
-        <Card
+      {/* Animated View Container */}
+      <motion.div
+        key={viewMode}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        {viewMode === "timeline" ? (
+          <TimelineView projects={projectsData} />
+        ) : (
+          <div className="h-[800px]">
+            <MapView projects={projectsData} edges={edges} />
+          </div>
+        )}
+      </motion.div>
+    </section>
+  );
+}
+
+{/* OLD CODE REMOVED - Projects now rendered via projectsData.ts and TimelineView/MapView components */}
+{/*
+      <div className="hidden">
+        <div
           title={`Multimodal AI for clinical decision making`}
           subtitle={`with Professor Paul Liang and David Dai @ MIT Media Lab's Multisensory Intelligence Group | Sep 2025 - Present`}
           description={
@@ -163,6 +214,31 @@ using in vivo clinical language.
           ]}
         />
         <Card
+          title={`Analyzing extrachromosomal circular DNA from ovarian cancer organoid whole genome sequencing`}
+          subtitle={`with Professor Krister Wennerberg @ University of Copenhagen's Biotech Research and Innovation Centre | June 2024 - August 2024`}
+          description={
+            <>
+              <p className="mb-2">Metabolic dysfunction-associated fatty liver disease (MAFLD) affects 25% of
+adults in the United States and affects those with Type 2 diabetes and class III obesity
+ at disproportionately higher rates. We present a deep learning-based framework for early 
+ prognosis of MAFLD in adults using structured clinical data from Mass General Brigham. 
+ Our approach utilizes binary classification, neural network prediction, linear and 
+ logistic regression, and survival modeling, as well as experimentation with addressing 
+ class imbalance. The study supports early clinical risk stratification and reveals 
+ predictive biomarkers using SHAP interpretation.</p>
+            </>
+          }
+          tech={["Python", "HPC (SLURM)", 
+              ]}
+          keywords={[
+            "EHR Data Preprocessing", "Addressing Class Imbalance", "Interpretability", "Time-to-event prediction", "Shapley scores",
+            ]}
+          links={[
+            { text: "View the code", url: "https://github.com/jeannieshe/mlhc-masld" },
+            { text: "View the report", url: "/She_Song_Zhang_MASLD_2025.pdf" },
+          ]}
+        />
+        <Card
           title={`Engineering and modeling chimeric antigen receptor macrophages to tackle cancer cachexia`}
           subtitle={`MIT iGEM 2023 | Jan 2023 - Nov 2023`}
           description={
@@ -205,11 +281,4 @@ using in vivo clinical language.
             "/images/igem1.jpg",
             "/images/igem3.jpg",
           ]}
-          imageHeight = "h-[350px]"
-        />
-        
-      </div>
-
-    </section>
-  )
-}
+*/}
