@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import Card from './components/card'
 import Image from 'next/image'
+import { BlogPosts } from 'app/components/posts'
 
-export const runtime = "edge";
+
+export const runtime = "nodejs";
 
 export default function Page() {
   return (
@@ -99,6 +101,18 @@ export default function Page() {
           }
         />
       </div>
+
+      <div className='mb-10'>
+
+      </div>
+      <h2 className="mb-5 text-3xl font-semibold tracking-tighter">
+        blogposts
+      </h2>
+
+      <div className="my-8">
+        <BlogPosts />
+      </div>
+      
     </section>
   )
 }

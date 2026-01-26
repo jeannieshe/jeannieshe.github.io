@@ -10,6 +10,9 @@ const navItems = {
   '/coursework': {
     name: 'teaching + coursework',
   },
+  '/blog': {
+    name: 'blog',
+  },
 }
 
 export function Navbar() {
