@@ -3,7 +3,8 @@
     "allow": [
       "Bash(chmod:*)",
       "Bash(/bin/bash:*)",
-      "WebFetch(domain:www.harm0n.com)"
+      "WebFetch(domain:www.harm0n.com)",
+      "Bash(find:*)"
     ]
   }
 }
