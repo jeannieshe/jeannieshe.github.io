@@ -84,7 +84,9 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-6 text-neutral-800 dark:text-neutral-200 relative;
+  line-height: 1.8;
+  max-width: 65ch;
 }
 
 .prose h1 {
@@ -147,4 +149,40 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* Sidenote counter */
+.prose {
+  counter-reset: sidenote-counter;
+}
+
+.sidenote-wrapper {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-ref::after {
+  content: counter(sidenote-counter);
+}
+
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+}
+
+/* Mobile sidenotes - show inline */
+@media (max-width: 767px) {
+  .sidenote {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid theme('colors.neutral.300');
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .sidenote {
+      border-left-color: theme('colors.neutral.700');
+    }
+  }
 }

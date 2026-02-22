@@ -51,9 +51,9 @@ contain point mutations which align with those identified in literature to impro
     ],
     links: [
       { text: "View the repo", url: "https://github.com/jeannieshe/protein-evolution" },
-      { text: "View the report", url: "/She_Spivakovsky_ProteinEvolution_2025.pdf" },
+      { text: "View the report", url: "/documents/She_Spivakovsky_ProteinEvolution_2025.pdf" },
     ],
-    images: ["/images/labeledbestPPO.png"],
+    images: ["/images/projects/rl-protein/labeledbestPPO.png"],
     imageHeight: "h-[400px]",
     date: "2025-12",
     category: "AI/ML"
@@ -86,8 +86,8 @@ healthcare equity in underserved populations.`}</p>
       { text: "View the preprint on arxiv", url: "https://arxiv.org/abs/2507.14738" },
     ],
     images: [
-      "/images/pipeline1.jpg",
-      "/images/pipeline2.png",
+      "/images/projects/multiretnet/pipeline1.jpg",
+      "/images/projects/multiretnet/pipeline2.png",
     ],
     imageHeight: "h-[350px]",
     date: "2025-05",
@@ -115,7 +115,7 @@ adults in the United States and affects those with Type 2 diabetes and class III
     ],
     links: [
       { text: "View the code", url: "https://github.com/jeannieshe/mlhc-masld" },
-      { text: "View the report", url: "/She_Song_Zhang_MASLD_2025.pdf" },
+      { text: "View the report", url: "/documents/She_Song_Zhang_MASLD_2025.pdf" },
     ],
     date: "2025-05",
     category: "Healthcare"
@@ -190,11 +190,11 @@ using in vivo clinical language.
     links: [
       { text: "View the report", url: "https://murj-assets.s3.amazonaws.com/assets/issues/Vol_47_Published.pdf#page=19" },
       { text: "View the team wiki", url: "https://2023.igem.wiki/mit/" },
-      { text: "View the poster", url: "/MIT_iGEM_2023_Poster.pdf" },
+      { text: "View the poster", url: "/documents/MIT_iGEM_2023_Poster.pdf" },
     ],
     images: [
-      "/images/igem1.jpg",
-      "/images/igem3.jpg",
+      "/images/projects/igem/igem1.jpg",
+      "/images/projects/igem/igem3.jpg",
     ],
     imageHeight: "h-[350px]",
     date: "2023-11",

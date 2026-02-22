@@ -1,10 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "generate:posts": "node scripts/generate-posts.mjs",
+    "dev": "npm run generate:posts && next dev",
+    "build": "npm run generate:posts && next build",
     "start": "next start",
-    "pages:build": "npx @cloudflare/next-on-pages"
+    "pages:build": "npm run generate:posts && npx @cloudflare/next-on-pages",
+    "pages:watch": "npx @cloudflare/next-on-pages --watch",
+    "pages:dev": "wrangler pages dev .vercel/output/static"
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.0.0-alpha.13",
