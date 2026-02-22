@@ -1,4 +1,5 @@
 import Card from "app/components/card"
+import Link from 'next/link'
 
 export const runtime = "edge";
 
@@ -23,11 +24,34 @@ export default function Coursework() {
 
       <div className="flex flex-col gap-y-4">
         <Card
+          title={`MIT Biotech Group Consulting Initiative`}
+          subtitle={`Co-director | Sep 2025 - Jan 2026`}
+          description={
+            <>
+              I pioneered a new branch of the MIT Biotech Group focused on life science consulting
+              to fill an unseen gap in these resources on campus. I recruited and trained a
+              20-student team spanning undergraduates, graduate students and postdocs to deliver analyses for local startups and research labs.
+              I prioritized contributing to future MIT classes, leaving a meaningful legacy, and empowering my peers with the faith
+              that they can learn and achieve whatever they put their minds to. 
+            </>
+          }
+          images={["/images/coursework/consulting-initiative/first_meeting.jpg", "/images/projects/consulting-initiative/seaport.jpg", "/images/coursework/consulting-initiative/dinner.jpg"]}
+        />
+        <Card
           title={`6.S191 Introduction to Deep Learning`}
           subtitle={`Teaching Assistant | Jan 2025`}
-          description={`I'm super excited to be one of four in-person teaching assistants for one of 
-            the most highly enrolled classes during MIT's Independent Activities Period (IAP). 
-            To be updated!`}
+          description={
+            <>
+              I served as one of five TAs leading one of the most globally-watched and
+              highly-subscribed week-long bootcamps on machine learning. This course exposes students from all
+              backgrounds to key concepts in machine learning, including transformers, CNNs, RNNs,
+              and bias removal in AI. I always champion democratizing education, and being able to lead this highly
+              accessible course intended to reduce barriers to entry into ML was extremely gratifying. {' '}
+              <Link className="underline decoration-[#B33E6D]" href="http://introtodeeplearning.com/">
+                Check out the lab materials!
+              </Link>
+            </>
+          }
         />
         <Card
           title="20.309 Bioinstrumentation & Measurement"
@@ -40,7 +64,7 @@ export default function Coursework() {
           I felt just as gratified as the student. 20.309 covers quantitative biological measurement, 
           electronic and optical instrumentation, microscopy and imaging systems, signal 
           processing and noise analysis, and statistical interpretation of experimental data.`}
-          images={["/images/image1.jpg", "/images/image2.jpg"]}
+          images={["/images/coursework/bioinstrumentation/image1.jpg", "/images/coursework/bioinstrumentation/image2.jpg"]}
         />
         <Card
           title={`6.3700 Probability & Statistics`}
