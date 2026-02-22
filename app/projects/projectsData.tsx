@@ -69,7 +69,7 @@ contain point mutations which align with those identified in literature to impro
       { text: "View the repo", url: "https://github.com/jeannieshe/protein-evolution" },
       { text: "Contact me for the Report!", url: "mailto:jeanshe@mit.edu" },
     ],
-    images: ["/images/labeledbestPPO.png"],
+    images: ["/images/projects/rl-protein/labeledbestPPO.png"],
     imageHeight: "h-[400px]",
     date: "2025-12",
     category: "AI/ML"
@@ -102,8 +102,8 @@ healthcare equity in underserved populations.`}</p>
       { text: "View the preprint on arxiv", url: "https://arxiv.org/abs/2507.14738" },
     ],
     images: [
-      "/images/pipeline1.jpg",
-      "/images/pipeline2.png",
+      "/images/projects/multiretnet/pipeline1.jpg",
+      "/images/projects/multiretnet/pipeline2.png",
     ],
     imageHeight: "h-[350px]",
     date: "2025-05",
@@ -209,8 +209,8 @@ using in vivo clinical language.
       { text: "View the poster", url: "/MIT_iGEM_2023_Poster.pdf" },
     ],
     images: [
-      "/images/igem1.jpg",
-      "/images/igem3.jpg",
+      "/images/projects/igem/igem1.jpg",
+      "/images/projects/igem/igem3.jpg",
     ],
     imageHeight: "h-[350px]",
     date: "2023-11",
