@@ -35,7 +35,7 @@ export default function Coursework() {
               that they can learn and achieve whatever they put their minds to. 
             </>
           }
-          images={["/images/coursework/consulting-initiative/first_meeting.jpg", "/images/projects/consulting-initiative/seaport.jpg", "/images/coursework/consulting-initiative/dinner.jpg"]}
+          images={["/images/coursework/consulting-initiative/first_meeting.jpg", "/images/coursework/consulting-initiative/seaport.jpg", "/images/coursework/consulting-initiative/dinner.jpg"]}
         />
         <Card
           title={`6.S191 Introduction to Deep Learning`}
