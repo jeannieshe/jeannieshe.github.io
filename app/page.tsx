@@ -8,10 +8,20 @@ export const runtime = 'edge'
 export default function Page() {
   return (
     <section>
-          
-      <div className="flex flex-row gap-10">
+
+      <div className="flex flex-col md:flex-row gap-10">
+        <div className="w-full flex justify-center md:block md:w-[30%] md:items-start">
+          <Image
+            className="rounded-full object-cover w-[60%] md:w-full aspect-square"
+            src="/images/happy-on-killian.jpg"
+            alt="A headshot of Jeannie She"
+            width="500"
+            height="500"
+            style={{ objectPosition: "40% center" }}
+          />
+        </div>
         <div className="md:w-[70%]">
-          <h1 className="mb-8 text-4xl font-semibold tracking-tighter">
+          <h1 className=" mb-8 text-4xl font-semibold tracking-tighter">
             hi! i'm jeannie.
           </h1>
           <p className="mb-8">
@@ -26,11 +36,11 @@ export default function Page() {
           <p className="mb-8">
             I believe time, attention, and joy are our most valuable assets as humans. They, amongst <Link className="underline decoration-[#B33E6D] ml-0.5" href="/about">other life experiences</Link>, have made me who I am today.
           </p>
-          
+
           {/* <p className="mb-8">
-          {`I enjoy reading, weightlifting, playing 
-          Bananagrams, playing tennis, running 5Ks, admiring sunsets, 
-          exploring new cities, hiking, taking risks on my peers (see: pioneering the MIT Biotech Group's Consulting Initiative), 
+          {`I enjoy reading, weightlifting, playing
+          Bananagrams, playing tennis, running 5Ks, admiring sunsets,
+          exploring new cities, hiking, taking risks on my peers (see: pioneering the MIT Biotech Group's Consulting Initiative),
           and anything where I get to cherish and share joy with people I adore.`}
           </p>
           <p className="mb-8">
@@ -40,17 +50,6 @@ export default function Page() {
           My email is <Link className="underline decoration-[#B33E6D] ml-0.5" href="mailto:jeanshe@mit.edu">jeanshe at mit dot edu</Link>. Feel free to reach out!
           </p> */}
         </div>
-        <div className="md:w-[30%] flex justify-center items-start">
-          <Image 
-            className="rounded-full object-cover w-full aspect-square" 
-            src="/images/happy-on-killian.jpg" 
-            alt="A headshot of Jeannie She" 
-            width="500" 
-            height="500"
-            style={{ objectPosition: "40% center" }}
-          />
-        </div>
-
       </div>
 
       {/* <h2 className="mb-5 text-3xl font-semibold tracking-tighter">
