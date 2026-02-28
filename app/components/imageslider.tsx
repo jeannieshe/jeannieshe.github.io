@@ -5,14 +5,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ImageSliderProps {
   images: string[];
-  height?: string;
   aspectRatio?: string;
 }
 
-export default function ImageSlider({ 
-  images, 
-  height = "h-[400px]",
-  aspectRatio = "4/3"
+export default function ImageSlider({
+  images,
+  aspectRatio = "4/3",
 }: ImageSliderProps): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -39,8 +37,8 @@ export default function ImageSlider({
   }
 
   return (
-    <div 
-      className={`relative ${height} group`}
+    <div
+      className="relative w-full group overflow-hidden rounded-lg"
       style={{ aspectRatio }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

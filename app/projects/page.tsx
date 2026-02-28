@@ -35,7 +35,6 @@ export default function Projects() {
             keywords={project.keywords}
             links={project.links}
             images={project.images}
-            imageHeight={project.imageHeight}
           />
         ))}
       </div>

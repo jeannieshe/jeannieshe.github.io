@@ -15,7 +15,6 @@ interface CardProps {
   tech?: string[];
   links?: Link[];
   images?: string[];
-  imageHeight?: string;
   imageAspectRatio?: string;
 }
 
@@ -27,7 +26,6 @@ export default function Card({
   tech,
   links,
   images,
-  imageHeight = "h-[250px]",
   imageAspectRatio = "4/3",
 }: CardProps) {
   return (
@@ -84,7 +82,6 @@ export default function Card({
           <div className="md:w-[40%] flex items-center justify-center">
             <ImageSlider
               images={images}
-              height={imageHeight}
               aspectRatio={imageAspectRatio}
             />
           </div>
