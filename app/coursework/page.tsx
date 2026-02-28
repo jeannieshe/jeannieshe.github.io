@@ -12,6 +12,38 @@ export default function Coursework() {
   return (
     <section>
       <h1 className="mb-8 text-4xl font-semibold tracking-tighter">
+        industry experience
+      </h1>
+
+      <div className="flex flex-col gap-y-4">
+        <Card
+          title={`Software and AI Engineer @ Nasdaq`}
+          subtitle={`Jan 2026 - Present`}
+          keywords={["LLM Finetuning", "API Design", "Python", "Terraform", "Node.js", "React", "AWS", "Docker"]}
+        />
+        <Card
+          title={`Software Engineer @ Stealth Healthtech Startup`}
+          subtitle={`Jun 2025 - Aug 2025`}
+          keywords={["OpenAI API", "Supabase", "Node.js", "React"]}
+        />
+        <Card
+          title={`Process Development Engineer @ Moderna`}
+          subtitle={`Jun 2025 - Aug 2025`}
+          keywords={["Lipid Nanoparticle Engineering", "Data Processing", "AF4 Fractionation", "Dynamic Light Scattering", "High Throughput Assays"]}
+        />
+        <Card
+          title={`Bioinformatician @ Biotech Research & Innovation Centre (BRIC), University of Copenhagen`}
+          subtitle={`Jun 2024 - Aug 2024`}
+          keywords={["Whole Genome Sequencing Analysis", "Python", "Bash", "R", "Fastq Quality Control", "Data Visualization"]}
+        />
+        
+      </div>
+
+      {/* make space */}
+      <div className="mb-8">
+      </div>
+
+      <h1 className="mb-8 text-4xl font-semibold tracking-tighter">
         teaching
       </h1>
 
