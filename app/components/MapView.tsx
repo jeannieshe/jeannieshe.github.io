@@ -13,7 +13,6 @@ interface MapViewProps {
 interface SimulationNode extends d3.SimulationNodeDatum {
   id: string;
   title: string;
-  category: string;
   project: ProjectNode;
   x?: number;
   y?: number;
@@ -69,7 +68,6 @@ export default function MapView({ projects, edges }: MapViewProps) {
     const nodes: SimulationNode[] = projects.map((project) => ({
       id: project.id,
       title: project.title,
-      category: project.category,
       project: project,
     }));
 
@@ -131,7 +129,6 @@ export default function MapView({ projects, edges }: MapViewProps) {
     nodeGroup
       .append("circle")
       .attr("r", 20)
-      .attr("fill", (d) => categoryColors[d.category] || "#6366f1")
       .attr("stroke", "#fff")
       .attr("stroke-width", 2)
       .attr("class", "node-circle transition-all duration-300");

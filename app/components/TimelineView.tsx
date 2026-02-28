@@ -18,7 +18,6 @@ export default function TimelineView({ projects }: TimelineViewProps) {
           keywords={project.keywords}
           links={project.links}
           images={project.images}
-          imageHeight={project.imageHeight}
         />
       ))}
     </div>
