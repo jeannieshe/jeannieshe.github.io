@@ -29,7 +29,7 @@ export default function Page() {
             `}
           </p>
           <p className="mb-8">
-            {`I'm a student at MIT studying AI and bioengineering (currently on leave). I conduct research on, build,
+            {`I'm an Arc Institute AIxBio fellow and a student at MIT studying AI and bioengineering. I conduct research on, build,
             and engineer highly ethical, explainable AI to remove human-made bottlenecks.
             `}
           </p>
