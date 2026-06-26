@@ -18,11 +18,11 @@ export default function About() {
         {`Like toppings on an everything bagel, a handful of life experiences peppered throughout 
         my years have shaped who I am today. I share a select few below which may shed more light on why I find time, attention, and joy invaluable.`}
       </p>
-      <p className="mb-4">
+      <p className="mb-8">
         {`___`}
       </p>
 
-      <p className="mb-4">
+      <p className="mb-8">
         <>
         1. Before I matriculated to MIT, I took a gap year, motivated by mental burnout, political activism, and physical illness.
         I spent a few months doing a homestay program in Barcelona with my best friend S, eating the best fresh purple tomatoes 
@@ -34,17 +34,17 @@ export default function About() {
         </>
       </p>
 
-      <p className="mb-4">
+      <p className="mb-8">
         {`2. My chronic illness coaches me to developing mental resilience, patience, and to never take a moment for granted. If you, too, find yourself on 
         an elimination diet, sleeping on allergy patch tests, or rehashing your experience repeatedly to so many doctors you develop your own "pitch" complete with an album
         of photos to present, I see you and send love.`}
       </p>
 
-      <p className="mb-4">
+      <p className="mb-8">
         {`3. As a daughter of Chinese immigrants, the pride I feel for and inspiration I feel from my parents trumps any fear I could ever ever experience when taking risks.`}
       </p>
 
-      <p className="mb-4">
+      <p className="mb-8">
         {`4. Amidst the chaos, the moments I cherish the absolute most coincide with laughing until I keel over, playing Bananagrams with close friends and strangers alike, eating the world's panoply of delectable foods with interesting people, and any activity where I get to cherish and share joy with people I adore.`}
       </p>
 
