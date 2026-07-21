@@ -36,6 +36,9 @@ export default function Page() {
           <p className="mb-8">
             I believe time, attention, and joy are our most valuable assets as humans. They, amongst <Link className="underline decoration-[#B33E6D] ml-0.5" href="/about">other life experiences</Link>, have made me who I am today.
           </p>
+          <p className="mb-8 italic">
+            Last updated July 20, 2026.
+          </p>
 
           {/* <p className="mb-8">
           {`I enjoy reading, weightlifting, playing

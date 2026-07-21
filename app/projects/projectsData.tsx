@@ -3,7 +3,7 @@ import React from 'react';
 export interface ProjectNode {
   id: string;
   title: string;
-  subtitle: string;
+  subtitle: React.ReactNode;
   description: React.ReactNode;
   tech: string[];
   keywords: string[];
@@ -15,25 +15,23 @@ export const projectsData: ProjectNode[] = [
   {
     id: "aurora-icml-2026",
     title: "AURORA: Alignment-Guided Mutation Proposal for Protein Engineering",
-    subtitle: "Spivakovsky, K., She, J., Shapiro, N., Ramesh, K. | May 2026",
+    subtitle: <>Spivakovsky, K., <strong>She, J.</strong>, Shapiro, N., Ramesh, K. | May 2026</>,
     description: (
       <>
-        <p className="mb-8">Abstract: Protein engineering introduces mutations to enhance protein function and has immense therapeutic, agricultural, and industrial applications, but experimental validation is expensive, limiting available data. </p>
+        <p className="mb-8">(Paraphrased from the abstract) </p>
+        
+        <p className="mb-8">The prevailing computational approach for protein engineering uses a protein foundation model for two tasks: an oracle built on its representations scores mutation effects, and a search procedure proposes mutations through reinforcement learning.</p>
 
-        <p className="mb-8">The prevailing computational approach uses a protein foundation model for two tasks: an oracle built on its representations scores mutation effects, and a search procedure proposes mutations through reinforcement learning (RL). These approaches predominantly rely on single-sequence models, namely ESM, that predict masked amino acids, requiring them to infer mutation interactions from single sequences rather than mutation co-evolution patterns across multiple homologous sequences. </p>
+        <p className="mb-8">We introduce an alignment-guided mutation proposer and oracle (AURORA), a protein engineering framework with two key components that optimize each of these tasks separately.</p>
 
-        <p className="mb-8">We introduce an alignment-guided mutation proposer and oracle (AURORA), a protein engineering framework with two key components.</p>
-
-        <p className="mb-8">First, we investigate the natural transition to multiple sequence alignment (MSA)-based models, namely MSA Pairformer, which directly compares homologs; we quantify architectural expressivity on synthetic proteins and find Pairformer performs better on downstream benchmarks, notably ProteinGym.</p>
-
-        <p className="mb-8">Second, because representation models capture evolutionary distributions while search optimizes experimental rewards, we decouple these tasks: Pairformer scores mutants while a separate lightweight policy trained with RL proposes mutations, enabling direct multi-site proposals rather than iterative single-site search. We then validate AURORA in vitro on green fluorescent protein, training on limited data to generate novel variants that demonstrate higher fluorescence than existing methods.</p>
+        <p className="mb-8">To search for optimal protein fitness, MSA Pairformer scores mutants while a separate lightweight policy trained with RL proposes mutations, enabling direct multi-site proposals rather than iterative single-site search. We then validate AURORA in vitro on green fluorescent protein, training on limited data to generate novel variants that demonstrate higher fluorescence than existing methods.</p>
 
         <p className="mb-8 underline decoration-[#B33E6D] decoration-3">Accepted poster at ICML 2026 GenBio Workshop.</p>
       </>
     ),
-    tech: ["Python", "Bash", "Stable Baselines-3"],
+    tech: ["Python", "Bash", "Stable Baselines-3", "HPC (SLURM)"],
     keywords: [
-      "Protein engineering", "Reinforcement learning", "PPO", "Synthetics", "MSA-Pairformer"
+      "Protein engineering", "Reinforcement learning", "PPO", "Synthetics", "MSA-Pairformer", "Structural and functional landscape prediction"
     ],
     links: [
       { text: "View the ICML article", url: "https://openreview.net/forum?id=Pj84px7sne" },
@@ -43,14 +41,14 @@ export const projectsData: ProjectNode[] = [
   {
     id: "multimodal-ai-clinical",
     title: "Multimodal AI for clinical decision making",
-    subtitle: "with Professor Paul Liang and David Dai @ MIT Media Lab's Multisensory Intelligence Group | Sep 2025 - Present",
+    subtitle: "with Professor Paul Liang and David Dai @ MIT Media Lab's Multisensory Intelligence Group | Sep 2025 - Jun 2026",
     description: (
       <>
-        <p className="mb-8">Multimodal reasoning based foundation models hold considerable promise for addressing key challenges in medical practice, yet their readiness for real-world deployment remains insufficiently explored. To bridge this gap, I am working on two foundation models that aim to excel in clinical generalizability and accuracy. I am researching entropy collapse over the course of RL training.</p>
+        <p className="mb-8">Multimodal reasoning based foundation models hold considerable promise for addressing key challenges in medical practice, yet their readiness for real-world deployment remains insufficiently explored. To bridge this gap, I contributed to developing a foundational model that excels in clinical generalizability and accuracy.</p>
 
-        <p className="mb-8">In this work, I've preprocessed EHR data from MIMIC-IV and used it in model training, analyzed model performance before and after supervised finetuning, and evaluated model robustness to hallucinations and likelihood of perpetuating clinical inequities with LLM-as-a-judge.</p>
+        <p className="mb-8">I've preprocessed EHR data from MIMIC-IV and used it in training for our foundational model, analyzed model performance before and after supervised finetuning, and evaluated model robustness to hallucinations and likelihood of perpetuating clinical inequities with LLM-as-a-judge.</p>
 
-        <p className="mb-8 underline decoration-[#B33E6D] decoration-3">Second author on a manuscript submitted to npj Digital Medicine.</p>
+        <p className="mb-8 underline decoration-[#B33E6D] decoration-3">Second author on a manuscript accepted by npj Digital Medicine.</p>
       </>
     ),
     tech: ["Python", "Bash", "PyTorch", "VLLM", "DeepEval", "HPC (SLURM)"],
@@ -59,30 +57,30 @@ export const projectsData: ProjectNode[] = [
       "large-scale data preprocessing", "finetuning", "reinforcement learning"
     ],
   },
-  {
-    id: "protein-evolution-rl",
-    title: "In silico protein evolution with reinforcement learning",
-    subtitle: "6.7920 Reinforcement Learning Final Project | Dec 2025 - Present",
-    description: (
-      <>
-        <p className="mb-8">Protein fitness landscapes are high-dimensional, discrete, and rugged: single amino acid substitutions can dramatically alter stability and activity, yet exhaustive experimental characterizationis intractable.</p>
+  // {
+  //   id: "protein-evolution-rl",
+  //   title: "In silico protein evolution with reinforcement learning",
+  //   subtitle: "6.7920 Reinforcement Learning Final Project | Dec 2025 - Present",
+  //   description: (
+  //     <>
+  //       <p className="mb-8">Protein fitness landscapes are high-dimensional, discrete, and rugged: single amino acid substitutions can dramatically alter stability and activity, yet exhaustive experimental characterizationis intractable.</p>
         
-        <p className='mb-8'>In this work, we utilize deep mutational scanning data as a set of ground truth labels that help define a small fraction of the extensive protein mutational space. We additionally apply foundation protein language model ESM-2 to represent protein sequences in a high dimensional, descriptive latent space for modeling.</p>
+  //       <p className='mb-8'>In this work, we utilize deep mutational scanning data as a set of ground truth labels that help define a small fraction of the extensive protein mutational space. We additionally apply foundation protein language model ESM-2 to represent protein sequences in a high dimensional, descriptive latent space for modeling.</p>
 
-        <p className="mb-8">Reinforcement learning provides an apt framework for efficient exploration under sparse, delayed rewards: protein sequencesdefine states, mutations define actions, and experimental stability and activity provide reward. By honing in on the protein AAV2 and RL algorithms A2C and PPO, we found that A2C explores more novel variants than PPO during training, while PPO exploits actionswith high reward. Our models demonstrate learned biological significance as their generated variants contain point mutations which align with those identified in literature to improve AAV2 fitness.</p>
-      </>
-    ),
-    tech: ["Python", "Bash", "Stable Baselines-3", "ESM-2", "HPC (SLURM)"],
-    keywords: [
-      "Protein evolution", "Reinforcement learning end-to-end pipeline design", "A2C", "PPO", "ESM-2",
-      "Structural and functional landscape prediction"
-    ],
-    links: [
-      { text: "View the repo", url: "https://github.com/jeannieshe/protein-evolution" },
-      { text: "Contact me for the Report!", url: "mailto:jeanshe@mit.edu" },
-    ],
-    images: ["/images/projects/rl-protein/labeledbestPPO.png"],
-  },
+  //       <p className="mb-8">Reinforcement learning provides an apt framework for efficient exploration under sparse, delayed rewards: protein sequencesdefine states, mutations define actions, and experimental stability and activity provide reward. By honing in on the protein AAV2 and RL algorithms A2C and PPO, we found that A2C explores more novel variants than PPO during training, while PPO exploits actionswith high reward. Our models demonstrate learned biological significance as their generated variants contain point mutations which align with those identified in literature to improve AAV2 fitness.</p>
+  //     </>
+  //   ),
+  //   tech: ["Python", "Bash", "Stable Baselines-3", "ESM-2", "HPC (SLURM)"],
+  //   keywords: [
+  //     "Protein evolution", "Reinforcement learning end-to-end pipeline design", "A2C", "PPO", "ESM-2",
+  //     "Structural and functional landscape prediction"
+  //   ],
+  //   links: [
+  //     { text: "View the repo", url: "https://github.com/jeannieshe/protein-evolution" },
+  //     { text: "Contact me for the Report!", url: "mailto:jeanshe@mit.edu" },
+  //   ],
+  //   images: ["/images/projects/rl-protein/labeledbestPPO.png"],
+  // },
   {
     id: "multiretnet",
     title: "Multimodal vision model to predict diabetic retinopathy",

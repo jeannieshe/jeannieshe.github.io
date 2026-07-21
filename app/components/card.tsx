@@ -9,7 +9,7 @@ interface Link {
 
 interface CardProps {
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   description?: ReactNode;
   keywords?: string[];
   tech?: string[];

@@ -15,8 +15,9 @@ const navItems = {
   '/coursework': {
     name: 'experience',
   },
-  '/blog': {
+  'https://substack.com/@jeannieshe': {
     name: 'blog',
+    external: true,
   },
 }
 
@@ -36,8 +37,13 @@ export function Navbar() {
 
           {/* Desktop links */}
           <div className="ml-auto hidden md:flex flex-row items-center">
-            {otherItems.map(([path, { name }]) => (
-              <Link key={path} href={path} className={linkClass}>
+            {otherItems.map(([path, { name, external }]) => (
+              <Link
+                key={path}
+                href={path}
+                className={linkClass}
+                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
                 {name}
               </Link>
             ))}
@@ -60,12 +66,13 @@ export function Navbar() {
         {/* Mobile dropdown */}
         {menuOpen && (
           <div className="md:hidden absolute right-0 top-full flex flex-col items-end bg-black/70 backdrop-blur-sm px-4 py-2">
-            {otherItems.map(([path, { name }]) => (
+            {otherItems.map(([path, { name, external }]) => (
               <Link
                 key={path}
                 href={path}
                 className="py-2 px-1 text-xl text-white transition-all hover:text-neutral-300"
                 onClick={() => setMenuOpen(false)}
+                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
                 {name}
               </Link>
