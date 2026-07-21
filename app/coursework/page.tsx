@@ -17,8 +17,13 @@ export default function Coursework() {
 
       <div className="flex flex-col gap-y-4">
         <Card
+          title={`AIxBio Research Fellow @ Arc Institute`}
+          subtitle={`May 2026 - Present`}
+          keywords={["Reinforcement Learning", "Virtual Cells", "Protein Engineering"]}
+        />
+        <Card
           title={`Software and AI Engineer @ Nasdaq`}
-          subtitle={`Jan 2026 - Present`}
+          subtitle={`Jan 2026 - May 2026`}
           keywords={["LLM Finetuning", "API Design", "Python", "Terraform", "Node.js", "React", "AWS", "Docker"]}
         />
         <Card

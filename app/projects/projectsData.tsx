@@ -13,6 +13,34 @@ export interface ProjectNode {
 
 export const projectsData: ProjectNode[] = [
   {
+    id: "aurora-icml-2026",
+    title: "AURORA: Alignment-Guided Mutation Proposal for Protein Engineering",
+    subtitle: "Spivakovsky, K., She, J., Shapiro, N., Ramesh, K. | May 2026",
+    description: (
+      <>
+        <p className="mb-8">Abstract: Protein engineering introduces mutations to enhance protein function and has immense therapeutic, agricultural, and industrial applications, but experimental validation is expensive, limiting available data. </p>
+
+        <p className="mb-8">The prevailing computational approach uses a protein foundation model for two tasks: an oracle built on its representations scores mutation effects, and a search procedure proposes mutations through reinforcement learning (RL). These approaches predominantly rely on single-sequence models, namely ESM, that predict masked amino acids, requiring them to infer mutation interactions from single sequences rather than mutation co-evolution patterns across multiple homologous sequences. </p>
+
+        <p className="mb-8">We introduce an alignment-guided mutation proposer and oracle (AURORA), a protein engineering framework with two key components.</p>
+
+        <p className="mb-8">First, we investigate the natural transition to multiple sequence alignment (MSA)-based models, namely MSA Pairformer, which directly compares homologs; we quantify architectural expressivity on synthetic proteins and find Pairformer performs better on downstream benchmarks, notably ProteinGym.</p>
+
+        <p className="mb-8">Second, because representation models capture evolutionary distributions while search optimizes experimental rewards, we decouple these tasks: Pairformer scores mutants while a separate lightweight policy trained with RL proposes mutations, enabling direct multi-site proposals rather than iterative single-site search. We then validate AURORA in vitro on green fluorescent protein, training on limited data to generate novel variants that demonstrate higher fluorescence than existing methods.</p>
+
+        <p className="mb-8 underline decoration-[#B33E6D] decoration-3">Accepted poster at ICML 2026 GenBio Workshop.</p>
+      </>
+    ),
+    tech: ["Python", "Bash", "Stable Baselines-3"],
+    keywords: [
+      "Protein engineering", "Reinforcement learning", "PPO", "Synthetics", "MSA-Pairformer"
+    ],
+    links: [
+      { text: "View the ICML article", url: "https://openreview.net/forum?id=Pj84px7sne" },
+      { text: "View the ICML poster", url: "/ICML_AURORA_poster.pdf" },
+    ],
+  },
+  {
     id: "multimodal-ai-clinical",
     title: "Multimodal AI for clinical decision making",
     subtitle: "with Professor Paul Liang and David Dai @ MIT Media Lab's Multisensory Intelligence Group | Sep 2025 - Present",
