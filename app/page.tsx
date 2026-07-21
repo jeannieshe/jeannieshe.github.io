@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import Card from './components/card'
 import Image from 'next/image'
-import { BlogPosts } from 'app/components/posts'
 
-export const runtime = 'edge'
 
 export default function Page() {
   return (

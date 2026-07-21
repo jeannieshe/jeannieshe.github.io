@@ -1,7 +1,6 @@
 import Card from "app/components/card"
 import Link from 'next/link'
 
-export const runtime = "edge";
 
 export const metadata = {
   title: 'coursework',

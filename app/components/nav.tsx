@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-const navItems = {
+const navItems: Record<string, { name: string; external?: boolean }> = {
   '/': {
     name: 'jeannie she',
   },

@@ -4,7 +4,10 @@
       "Bash(chmod:*)",
       "Bash(/bin/bash:*)",
       "WebFetch(domain:www.harm0n.com)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(npx tsc *)",
+      "Bash(npm view *)",
+      "Bash(npm install *)"
     ]
   }
 }

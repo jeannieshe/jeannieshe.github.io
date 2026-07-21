@@ -1,6 +1,5 @@
 import SubscribeForm from "./SubscribeForm";
 
-export const runtime = "edge";
 
 export const metadata = {
   title: "asymptote",

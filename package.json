@@ -5,11 +5,12 @@
     "dev": "npm run generate:posts && next dev",
     "build": "npm run generate:posts && next build",
     "start": "next start",
-    "pages:build": "npm run generate:posts && npx @cloudflare/next-on-pages",
-    "pages:watch": "npx @cloudflare/next-on-pages --watch",
-    "pages:dev": "wrangler pages dev .vercel/output/static"
+    "preview": "npm run generate:posts && opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "npm run generate:posts && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.2",
     "@tailwindcss/postcss": "4.0.0-alpha.13",
     "@types/d3": "^7.4.3",
     "@types/node": "20.11.17",
@@ -19,10 +20,10 @@
     "@vercel/speed-insights": "^1.0.9",
     "d3": "^7.9.0",
     "framer-motion": "^12.24.7",
-    "geist": "1.2.2",
+    "geist": "^1.7.2",
     "lucide-react": "^0.562.0",
     "next": "^16.0.10",
-    "next-mdx-remote": "^4.4.1",
+    "next-mdx-remote": "^5.0.0",
     "postcss": "^8.4.35",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
@@ -31,6 +32,6 @@
     "typescript": "^5"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16"
+    "wrangler": "^4.113.0"
   }
 }

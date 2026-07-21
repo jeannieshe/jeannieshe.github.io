@@ -1,4 +1,3 @@
-export const runtime = "edge";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
